@@ -8,3 +8,4 @@ class Settings(BaseSettings):
 
     class Config:
         env_prefix = "ANALYTICS_"
+# history: feat: add ExperimentConfig dataclass and validation
