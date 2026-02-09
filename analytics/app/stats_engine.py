@@ -2,3 +2,4 @@
 
 # history: feat: implement bootstrap CI and Cohen d calculation
 # history: feat: add Mann-Whitney U and Bayesian comparison
+# history: feat: add ANOVA and correlation test methods
