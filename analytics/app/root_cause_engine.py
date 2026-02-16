@@ -401,3 +401,4 @@ def _analyze_tool_impact(traces: List[Any]) -> Dict[str, Dict]:
     
     return impacts
 # history: feat: add RootCauseEngine with regression detection
+# history: feat: implement correlated failure analysis across tools
