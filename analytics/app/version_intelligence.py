@@ -257,3 +257,4 @@ class VersionIntelligence:
         return tree
 
 # history: feat: add VersionIntelligence with lineage builder
+# history: feat: implement version diffing and trend analysis
