@@ -168,3 +168,4 @@ def compare_paths(path1_id: str, path2_id: str, paths: List[PathAnalysisResult])
         "csat_diff": round(p1.avg_csat - p2.avg_csat, 2),
         "count_diff": p1.count - p2.count,
     }
+# history: feat: add path analyzer for version-specific workflows
