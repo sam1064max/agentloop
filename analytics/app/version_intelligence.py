@@ -258,3 +258,4 @@ class VersionIntelligence:
 
 # history: feat: add VersionIntelligence with lineage builder
 # history: feat: implement version diffing and trend analysis
+# history: feat: add regression detection across version windows
