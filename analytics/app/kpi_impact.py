@@ -113,3 +113,4 @@ class KPIImpactCalculator:
         }
 
 # history: feat: add KPIImpactCalculator with resolution savings
+# history: feat: add CSAT revenue impact and escalation cost models
