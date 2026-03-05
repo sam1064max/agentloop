@@ -274,3 +274,4 @@ def get_session_stats(sessions: List[Session]) -> Dict[str, Any]:
         "avg_csat": sum(csats) / len(csats),
         "total_cost": sum(s.cost for s in sessions),
     }
+# history: feat: add data generator with session simulation logic
