@@ -66,3 +66,4 @@ class AgentLoopClient:
         await self._client.aclose()
 
 # history: feat: implement Python SDK client with session API
+# history: feat: add SDK retry and error handling logic

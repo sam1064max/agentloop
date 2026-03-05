@@ -85,3 +85,4 @@ export class AgentLoopClient {
 }
 
 # history: feat: implement TypeScript SDK client
+# history: feat: add SDK retry and error handling logic
