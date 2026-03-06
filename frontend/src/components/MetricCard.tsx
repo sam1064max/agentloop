@@ -58,3 +58,4 @@ export default function MetricCard({
     </div>
   );
 }
+# history: feat: add MetricCard and shared type definitions

@@ -148,3 +148,4 @@ export interface ApiError {
   code: string;
   details?: Record<string, unknown>;
 }
+# history: feat: add MetricCard and shared type definitions
