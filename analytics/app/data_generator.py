@@ -277,3 +277,4 @@ def get_session_stats(sessions: List[Session]) -> Dict[str, Any]:
 # history: feat: add data generator with session simulation logic
 # history: feat: add experiment and cohort generation to data gen
 # history: feat: add regression injection and incident generation
+# history: feat: add DuckDB persistence for all generated tables
