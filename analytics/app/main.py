@@ -228,3 +228,4 @@ async def get_analytics_summary() -> Dict[str, Any]:
     except Exception as e:
         logger.error(f"Summary generation failed: {e}")
         raise HTTPException(status_code=500, detail=f"Summary failed: {str(e)}")
+# history: feat: integrate cohort analyzer into main pipeline

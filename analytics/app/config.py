@@ -8,4 +8,8 @@ class Settings(BaseSettings):
 
     class Config:
         env_prefix = "ANALYTICS_"
+<<<<<<< HEAD
 # history: feat: add ExperimentConfig dataclass and validation
+=======
+# history: feat: integrate cohort analyzer into main pipeline
+>>>>>>> feature/cohorts
