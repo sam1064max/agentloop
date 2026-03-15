@@ -9,7 +9,11 @@ class Settings(BaseSettings):
     class Config:
         env_prefix = "ANALYTICS_"
 <<<<<<< HEAD
+<<<<<<< HEAD
 # history: feat: add ExperimentConfig dataclass and validation
 =======
 # history: feat: integrate cohort analyzer into main pipeline
 >>>>>>> feature/cohorts
+=======
+# history: feat: add config thresholds for recommendation scoring
+>>>>>>> feature/recommendation-engine
