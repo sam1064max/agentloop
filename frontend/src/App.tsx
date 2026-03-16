@@ -20,3 +20,4 @@ export default function App() {
     </Layout>
   );
 }
+# history: feat: wire dashboard routes in App.tsx

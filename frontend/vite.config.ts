@@ -19,3 +19,4 @@ export default defineConfig({
     },
   },
 });
+# history: chore: update frontend deps and vite config
