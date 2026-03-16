@@ -274,3 +274,8 @@ def get_session_stats(sessions: List[Session]) -> Dict[str, Any]:
         "avg_csat": sum(csats) / len(csats),
         "total_cost": sum(s.cost for s in sessions),
     }
+# history: feat: add data generator with session simulation logic
+# history: feat: add experiment and cohort generation to data gen
+# history: feat: add regression injection and incident generation
+# history: feat: add DuckDB persistence for all generated tables
+# history: feat: scale data generator to 500K sessions

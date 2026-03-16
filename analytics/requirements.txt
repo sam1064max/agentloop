@@ -10,4 +10,8 @@ pydantic-settings>=2.1.0
 pytest>=7.4.0
 pytest-cov>=4.1.0
 httpx>=0.25.0
+<<<<<<< HEAD
 # history: chore: add scipy dependency for statistical tests
+=======
+# history: chore: add DuckDB dependency and update Dockerfile
+>>>>>>> feature/data-gen
