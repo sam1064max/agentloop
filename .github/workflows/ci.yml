@@ -39,8 +39,9 @@ jobs:
           pip install ruff
 
       - name: Frontend npm install
-        run: npm ci
+        run: if (Test-Path package-lock.json) { npm ci } else { npm install }
         working-directory: frontend
+        shell: pwsh
 
       - name: Lint Python
         run: ruff check backend/ analytics/
@@ -55,6 +56,9 @@ jobs:
 
   test-backend:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
     steps:
       - uses: actions/checkout@v4
 
@@ -66,13 +70,13 @@ jobs:
           cache-dependency-path: backend/requirements.txt
 
       - name: Install deps
-        run: pip install -r backend/requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Run tests
         run: |
-          pytest backend/tests/ \
-            --cov=backend/app \
-            --cov-report=xml \
+          pytest tests/ \
+            --cov=app \
+            --cov-report=xml:../coverage.xml \
             --cov-report=term-missing \
             -v
 
@@ -82,8 +86,17 @@ jobs:
           name: coverage-backend
           path: coverage.xml
 
+      - name: Upload coverage
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-backend
+          path: coverage.xml
+
   test-analytics:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: analytics
     steps:
       - uses: actions/checkout@v4
 
@@ -95,15 +108,21 @@ jobs:
           cache-dependency-path: analytics/requirements.txt
 
       - name: Install deps
-        run: pip install -r analytics/requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Run tests
         run: |
-          pytest analytics/tests/ \
-            --cov=analytics/app \
-            --cov-report=xml \
+          pytest tests/ \
+            --cov=app \
+            --cov-report=xml:../coverage.xml \
             --cov-report=term-missing \
             -v
+
+      - name: Upload coverage
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-analytics
+          path: coverage.xml
 
       - name: Upload coverage
         uses: actions/upload-artifact@v4
@@ -165,3 +184,4 @@ jobs:
         with:
           files: dist/*
           generate_release_notes: true
+
